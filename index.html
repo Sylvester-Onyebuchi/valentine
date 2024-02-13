@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine Surprice</title>
+  <style>
+    body{
+      background-color: pink;
+    }
+    button{
+      background-color: black;
+      color: white;
+      border-radius: 20px;
+      width: 80px;
+      height: 30px;
+      font-size: 15px;
+    }
+    h1{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Valentive is here again!!</h1>
+  <img src="./QhNh7k.gif" alt="">
+  <h2>Hello Beautiful Damsel &#128522</h2>
+  <h2>Will you be my Valentine?</h2>
+
+  <button onclick="Valentine()">Yes</button>
+  <button onclick="noValentine()">No</button>
+  <div id="valentine" style="display: none;">
+    <img src="./romantic-valentines-day-gif.gif" alt="Valentine gif">
+  </div>
+  <div id="noval" style="display: none;"> 
+    <img src="./sad-ok-nice.gif" alt="sad gif">
+  </div>
+  
+  
+  <script>
+    function Valentine(){
+      let val = document.getElementById('valentine');
+      val.style.display = 'block';
+    }
+    function noValentine(){
+      document.getElementById('noval').style.display = 'block';
+    }
+    
+  </script>
+  
+  <br><br>
+  <a href="./index.html">Home</a>
+
+</body>
+</html>
