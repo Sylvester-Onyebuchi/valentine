@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For her❤️</title>
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    textarea {
+      width: 100%;
+      height: 120px;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .slideshow {
+      margin-top: 20px;
+    }
+
+    .slideshow img {
+      width: 220px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+
+     <div class="slideshow">
+      <img id="slide" src="/assets/photo1.jpeg">
+    </div>
+
+    <h1>Send me something ❤️</h1>
+
+    <!-- slideshow runs immediately -->
+   
+
+    <!-- message -->
+    <textarea id="msg" placeholder="Write anything you want..."></textarea>
+
+    <button onclick="sendMessage()">Send 💌</button>
+
+  </div>
+
+  <script>
+   
+    const images = [
+      "/assets/photo1.jpeg",
+      "/assets/photo2.jpeg",
+      "/assets/photo3.jpeg",
+      "/assets/photo4.jpeg",
+      "/assets/photo5.jpeg",
+       "/assets/photo6.jpeg", 
+      "/assets/photo7.jpeg",
+      "/assets/photo8.jpeg",
+      "/assets/photo9.jpeg",
+      "/assets/photo10.jpeg",
+      "/assets/photo11.jpeg"
+
+    ];
+
+    let index = 0;
+
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      document.getElementById("slide").src = images[index];
+    }, 1200);
+
+
+    
+    function sendMessage() {
+      const text = document.getElementById("msg").value;
+
+      const subject = encodeURIComponent("Message for you my baby❤️");
+      const body = encodeURIComponent(text);
+
+      window.location.href =
+        `mailto:sylvesteroyonah@gmail.com?subject=${subject}&body=${body}`;
+    }
+  </script>
+
+</body>
+</html>
